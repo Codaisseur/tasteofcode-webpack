@@ -7,12 +7,6 @@ export default class App {
     score: 0
   }
 
-  static hot = {
-    accept: () => {
-      this.render()
-    }
-  }
-
   constructor(props = {}) {
     this.props = Object.assign({}, App.defaults, props)
     const { balloonCount } = this.props
@@ -30,8 +24,6 @@ export default class App {
 
     this.removeBalloon(index)
     this.updateScore(poppedBalloon)
-
-    console.log(this.props.score, this.props.balloons.length)
   }
 
   updateScore(poppedBalloon) {

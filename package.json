@@ -9,7 +9,8 @@
     "build:copy": "cp index.html favicon.ico dist/ && cp src/assets/favicon-* dist/static/",
     "build": "npm run clean && npm run build:webpack && npm run build:copy",
     "start": "node devServer.js",
-    "test": "mocha test/setup.js --recursive src/*.test.js src/**/*.test.js src/**/**/*.test.js"
+    "test": "mocha test.js --recursive src/*.test.js src/**/*.test.js src/**/**/*.test.js",
+    "test:watch": "mocha -w test.js -G --recursive src/*.test.js src/**/*.test.js src/**/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -48,6 +49,7 @@
     "ignore-styles": "^5.0.1",
     "imports-loader": "^0.7.0",
     "jquery": "^3.1.1",
+    "jsdom": "^9.8.3",
     "json-loader": "^0.5.4",
     "mocha": "^3.2.0",
     "mocha-eslint": "^3.0.1",

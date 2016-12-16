@@ -12,7 +12,7 @@ module.exports = {
   // This is where it comes out
   output: {
     path: path.join(__dirname, 'dist', 'static'),
-    filename: "bundle.js",
+    filename: "bundle-[hash].js",
     publicPath: '/static/'
   },
   // Plugins help us with minifying and optimization
